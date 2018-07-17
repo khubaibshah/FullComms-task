@@ -1,0 +1,95 @@
+title = "Messages"
+url = "/messages"
+layout = "default"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    $this['get_info1'] = DB::table('fullcomms_test')->where('id', 1)->value('name');
+    $this['get_info2'] = DB::table('fullcomms_test')->where('id', 1)->value('email');
+    $this['get_info3'] = DB::table('fullcomms_test')->where('id', 1)->value('subject');
+    $this['get_info4'] = DB::table('fullcomms_test')->where('id', 1)->value('message');
+    
+    $this['get_info5'] = DB::table('fullcomms_test')->where('id', 2)->value('name');
+    $this['get_info6'] = DB::table('fullcomms_test')->where('id', 2)->value('email');
+    $this['get_info7'] = DB::table('fullcomms_test')->where('id', 2)->value('subject');
+    $this['get_info8'] = DB::table('fullcomms_test')->where('id', 2)->value('message');
+    
+    $this['get_info9'] = DB::table('fullcomms_test')->where('id', 3)->value('name');
+    $this['get_info10'] = DB::table('fullcomms_test')->where('id', 3)->value('email');
+    $this['get_info11'] = DB::table('fullcomms_test')->where('id', 3)->value('subject');
+    $this['get_info12'] = DB::table('fullcomms_test')->where('id', 3)->value('message');
+
+    $this['get_info13'] = DB::table('fullcomms_test')->where('id', 4)->value('name');
+    $this['get_info14'] = DB::table('fullcomms_test')->where('id', 4)->value('email');
+    $this['get_info15'] = DB::table('fullcomms_test')->where('id', 4)->value('subject');
+    $this['get_info16'] = DB::table('fullcomms_test')->where('id', 4)->value('message');
+
+    $this['get_info17'] = DB::table('fullcomms_test')->where('id', 5)->value('name');
+    $this['get_info18'] = DB::table('fullcomms_test')->where('id', 5)->value('email');
+    $this['get_info19'] = DB::table('fullcomms_test')->where('id', 5)->value('subject');
+    $this['get_info20'] = DB::table('fullcomms_test')->where('id', 5)->value('message');
+
+
+}
+
+function onAccept()
+{
+ return Redirect::to('contactdetails');
+}
+?>
+==
+<br><br>
+<div class="container">
+
+ 
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{get_info1}}</td>
+        <td>{{get_info2}}</td>
+        <td>{{get_info3}}</td>
+        <td>{{get_info4}}</td>
+      </tr>
+      <tr>
+        <td>{{get_info5}}</td>
+        <td>{{get_info6}}</td>
+        <td>{{get_info7}}</td>
+        <td>{{get_info8}}</td>
+      </tr>
+      <tr>
+       <td>{{get_info9}}</td>
+        <td>{{get_info10}}</td>
+        <td>{{get_info11}}</td>
+        <td>{{get_info12}}</td>
+      </tr>
+      <tr>
+       <td>{{get_info13}}</td>
+        <td>{{get_info14}}</td>
+        <td>{{get_info15}}</td>
+        <td>{{get_info16}}</td>
+      </tr>
+      <tr>
+       <td>{{get_info17}}</td>
+        <td>{{get_info18}}</td>
+        <td>{{get_info19}}</td>
+        <td>{{get_info20}}</td>
+      </tr>
+      <tr>
+    
+      
+    </tbody>
+  </table>
+</div>
+<button type="submit"  data-request="onAccept" style=" background: rgb(120, 75, 137); width: 20%; float:right;" class="btn btn-primary">Back</button>
+<br><br>
