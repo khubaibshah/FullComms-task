@@ -9,6 +9,10 @@ I have attached the files which are to be inserted into any project already set 
 
 I have also provided the SQL database table file which can be imported into mysql directly.
 
+If you could also set up the default file i have sent you in the layout section as this file has bootstrap links which make the form look the way it does.
+
+Thankyou.
+
 
 
 
